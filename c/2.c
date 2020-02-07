@@ -12,7 +12,7 @@ int main()
         int c = toupper(ch[i]);
         if (c >= 'A' && c <= 'Z')
         {
-            switch (c)
+            switch (ch[i])
             {
             case 'A':
             case 'E':
