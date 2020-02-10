@@ -3,6 +3,7 @@
 
 int prime(int n);
 void printMinMaxDigits(int n);
+void swap(int a, int b);
 
 int main()
 {
@@ -34,13 +35,18 @@ int main()
                     printf("It is not a prime\n");
                 break;
             case 2:
+            {
+                int min, max;
                 do
                 {
                     printf("\n enter n:");
                     scanf("%d", &n);
                 } while (n < 0);
                 printMinMaxDigits(n);
+                printf(" max:%d, min:%d", max, min);
+
                 break;
+            }
             }
         }
 
@@ -53,9 +59,10 @@ int main()
 int prime(int n)
 {
     int i;
-    for (i = 2; i <= (int)sqrt(n); i++){
+    for (i = 2; i <= (int)sqrt(n); i++)
+    {
         int count = n % i;
-        if (count = 0)
+        if (count = 0) //-----------------------
             return 0;
     }
     return 1;
@@ -66,6 +73,7 @@ void printMinMaxDigits(int n)
     int min, max;
     digit = n % 10;
     n = n / 10;
+    //min = max = digit;
     while (n > 0)
     {
         digit = n % 10;
@@ -75,5 +83,5 @@ void printMinMaxDigits(int n)
         if (max < digit)
             max = digit;
     }
-    printf(" max:%d, min:%d", max, min);
+    //printf(" max:%d, min:%d", max, min);
 }

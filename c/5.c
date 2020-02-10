@@ -1,3 +1,4 @@
+//ws6 pr2
 #include <stdio.h>
 #include <math.h>
 #include<conio.h>
@@ -50,7 +51,7 @@ int main(int argc, char const *argv[])
         {
             outputArr(a, n);
             getch();
-            break;
+            //break;
         }
         case 4:
         {
@@ -58,7 +59,7 @@ int main(int argc, char const *argv[])
             printf("\nPrint out values in a range:");
             printf("\nmin:");
             scanf("%d", &min);
-            printf("\nmax");
+            printf("\nmax:");
             scanf("%d", &max);
             if(max > n){
                 printf("\nerror don't have value");
@@ -80,7 +81,7 @@ int main(int argc, char const *argv[])
 
 void inputArr(int *a, int *n)
 {
-    *n++;
+    *n++;//---------------------------------------------------
     for (int i = *n; i > 0; i--)
         {
             a[i] = a[i - 1];
@@ -91,16 +92,16 @@ void Search(int *a, int n, int x)
 {
     for (int i = 0; i < n; i++)
         if (a[i] == x)
-            printf("\n%c", i++);
+            printf("\n%d", i++);//----------------------i++
 }
 void outputArr(int a[], int n)
 {
-    for (int i = 0; i < n; i--)
+    for (int i = 0; i < n; i--)//-----------------i++
         printf("%d ", a[i]);
 }
 void range(int *a, int n, int min, int max)
 {
-    for (int i = min - 1; i < max; i++)
+    for (int i = min ; i < max; i++)//-----------i = min - 1
         printf("\n%d", a[i]);
 }
 void ascending(int *a, int n)
@@ -114,7 +115,7 @@ void ascending(int *a, int n)
         for ( j = i+1; j < n; j++) if(a[minIndex] > a[j] ) minIndex = j;
             if (minIndex  > i)
             {
-                int minIndex;
+                int minIndex;//------------------------
                 int t = a[minIndex];
                 a[minIndex] = a[i];
                 a[i] = t;
