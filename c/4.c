@@ -4,7 +4,8 @@
 #define MAXNAME 10//---------------------------------------------------------
 #define MAXDAY 20
 int main(){
-    char name[MAXNAME],birthday[MAXDAY] ;
+    char name[MAXNAME];
+    char birthday[MAXDAY] ;
     int age, number;
     printf("#################################################################\n");
     printf("\t\t: Name: ");
@@ -14,9 +15,10 @@ int main(){
     printf("\t\t: Mobile number: ");
     scanf("%f",&number);//----------------------------
     printf("\t\t: Birthday(d/m/y): ");
-    scanf("%s",&birthday);//--------------------------
+    //fflush(stdin);
+    scanf("%c",&birthday);
     printf("#################################################################\n");
-    printf("%s %d old Birthday is %s Mobile number: %d", age, name, number, birthday);//------------------------------
+    printf("%d %s old Birthday is %s Mobile number: %s", age, name, number, birthday);//------------dep biet lam sao fix luôn
     getch();
     return 0;
 }
